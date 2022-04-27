@@ -1,0 +1,7 @@
+{
+	"makefile.extensionOutputFolder": "./.vscode",
+	"files.associations": {
+		"libft.h": "c",
+		"pushswap.h": "c"
+	}
+}

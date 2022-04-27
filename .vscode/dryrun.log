@@ -1,0 +1,5 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/greatng/42Bangkok/42cursus/pushswap'
+make: Nothing to be done for `all'.
+make: Leaving directory `/Users/greatng/42Bangkok/42cursus/pushswap'
+ 
