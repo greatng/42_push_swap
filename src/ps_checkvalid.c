@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 14:35:33 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/27 21:58:19 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/30 16:47:46 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,7 @@ static void	check_double(t_stack *stack, int size)
 		while (j < size)
 		{
 			if (stack->a[i] == stack->a[j++])
-			{
-				free(stack);
-				error(1, 0);
-			}
+				error(1, NULL, stack);
 		}
 		i++;
 	}
@@ -37,24 +34,27 @@ static void	check_double(t_stack *stack, int size)
 static void	to_stack(char **nbr, int size, int mode, t_stack *stack)
 {
 	int	i;
+	char	*check;
 
-	stack->a = calloc(size, sizeof(int));
+	stack->a = ft_calloc(size, sizeof(int));
 	i = mode - 1;
 	while (nbr[++i])
 	{
 		stack->a[i - mode] = ft_atoi(nbr[i]);
-		if (ft_strncmp(ft_itoa(stack->a[i - mode]), nbr[i] \
+		check = ft_itoa(stack->a[i - mode]);
+		if (ft_strncmp(check, nbr[i] \
 			, ft_strlen(nbr[i])))
 		{
-			free_stack(stack);
-			error(1, 0);
+			free(check);
+			error(1, NULL, stack);
 		}
+		free(check);
 	}
 	i = 0;
 	if (!mode)
 		free_all(nbr);
 	check_double(stack, size);
-	stack->b = calloc(size, sizeof(int));
+	stack->b = ft_calloc(size, sizeof(int));
 	stack->size_a = size;
 	stack->size_b = 0;
 	deter_algo(stack);
@@ -74,7 +74,7 @@ static int	check_digit(char **nbr, size_t n)
 			if (nbr[i][j] == '-')
 				j++;
 			if (!ft_isdigit(nbr[i][j]))
-				error(n, nbr);
+				error(n, nbr, NULL);
 			j++;
 		}
 		i++;
@@ -96,7 +96,7 @@ static void	check_invalid(int argc, char **argv)
 			if (!check[0])
 			{
 				free(check);
-				error(1, NULL);
+				error(1, NULL, NULL);
 			}
 			free(check);
 			i++;

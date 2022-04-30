@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 14:35:33 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/27 21:58:37 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/30 16:49:37 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,21 @@ static void	check_double(t_stack *stack, int size)
 static void	to_stack(char **nbr, int size, int mode, t_stack *stack)
 {
 	int	i;
+	char	*check;
 
 	stack->a = calloc(size, sizeof(int));
 	i = mode - 1;
 	while (nbr[++i])
 	{
 		stack->a[i - mode] = ft_atoi(nbr[i]);
-		if (ft_strncmp(ft_itoa(stack->a[i - mode]), nbr[i] \
+		check = ft_itoa(stack->a[i - mode]);
+		if (ft_strncmp(check, nbr[i] \
 			, ft_strlen(nbr[i])))
 		{
 			free_stack(stack);
 			error(1, 0);
 		}
+		free(check);
 	}
 	i = 0;
 	if (!mode)

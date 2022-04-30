@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 15:59:42 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/27 17:07:20 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/30 16:45:07 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,12 @@ void	free_stack(t_stack *stack)
 //mode 1 stack memmory
 //mode 0 heap memmory need free
 
-void	error(int mode, char **nbr)
+void	error(int mode, char **nbr, t_stack *stack)
 {
 	if (!mode)
 		free_all(nbr);
 	ft_putendl_fd("Error", 2);
+	free_stack(stack);
 	exit(ERROR_EXIT);
 }
 

@@ -1,6 +1,6 @@
 NAME			=	push_swap
 BONUS_NAME		=	checker
-LEAKS			=	-fsanitize=address -fno-omit-frame-pointer
+LEAKS			=	-fsanitize=address
 CC			=	gcc
 CFLAGS			=	-Wall -Wextra -Werror
 RM			=	rm -rf

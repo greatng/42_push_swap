@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 14:31:03 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/27 02:01:28 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/30 16:21:48 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct s_stack
 }	t_stack;
 
 void	check_arg(int argc, char **argv, t_stack *stack);
-void	error(int n, char **nbr);
+void	error(int n, char **nbr, t_stack *stack);
 void	free_all(char **nbr);
 void	free_stack(t_stack *stack);
 void	clean_exit(void);
