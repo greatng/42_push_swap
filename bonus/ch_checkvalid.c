@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 14:35:33 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/30 16:49:37 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/30 16:51:12 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static void	to_stack(char **nbr, int size, int mode, t_stack *stack)
 	int	i;
 	char	*check;
 
-	stack->a = calloc(size, sizeof(int));
+	stack->a = ft_calloc(size, sizeof(int));
 	i = mode - 1;
 	while (nbr[++i])
 	{
@@ -57,7 +57,7 @@ static void	to_stack(char **nbr, int size, int mode, t_stack *stack)
 	if (!mode)
 		free_all(nbr);
 	check_double(stack, size);
-	stack->b = calloc(size, sizeof(int));
+	stack->b = ft_calloc(size, sizeof(int));
 	stack->size_a = size;
 	stack->size_b = 0;
 }
