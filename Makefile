@@ -78,6 +78,9 @@ re:					fclean all
 
 bonus:				$(BONUS_NAME) 
 
+clone:
+					@git clone https://github.com/LeoFu9487/push_swap_tester.git
+
 $(BONUS_NAME):			$(LIBFT) $(OBJ_B) $(GNL) $(GNL_HEADER)
 					@echo "$(GREEN)Compiling Bonus:$(NORMAL)"
 					$(CC) $(CFLAGS) $(LIBFT) $(OBJ_B) $(GNL) $< -o $(BONUS_NAME)
