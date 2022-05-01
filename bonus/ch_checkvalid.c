@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 14:35:33 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/30 16:51:12 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/05/01 16:56:51 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	check_double(t_stack *stack, int size)
 
 static void	to_stack(char **nbr, int size, int mode, t_stack *stack)
 {
-	int	i;
+	int		i;
 	char	*check;
 
 	stack->a = ft_calloc(size, sizeof(int));
