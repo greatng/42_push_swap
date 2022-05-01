@@ -85,7 +85,7 @@ test:				all bonus
 					@./tester/tester.sh ./ 100 10
 					@./tester/tester.sh ./ 500 10
 					
-test2:				
+test2:				all bonus
 					@cp push_swap ./tester2/
 					@./tester2/tester.sh
 
