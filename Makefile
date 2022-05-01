@@ -64,7 +64,7 @@ $(LIBFT):
 clean:
 					@make -C $(LIBFT_PATH) clean
 					@$(RM) $(NAME) $(BONUS_NAME)
-					@$(RM) tester *.log
+					@$(RM) tester tester2 *.log log_error
 					@$(RM) push_swap_visualizer
 fclean:				clean
 					@make -C $(LIBFT_PATH) fclean
@@ -79,17 +79,22 @@ load:
 				curl -O https://projects.intra.42.fr/uploads/document/document/8341/checker_Mac
 				mv checker_Mac checker
 
-test:				clone all bonus
+test:				all bonus
 					@./tester/tester.sh ./ 3 10
 					@./tester/tester.sh ./ 5 10
 					@./tester/tester.sh ./ 100 10
 					@./tester/tester.sh ./ 500 10
+					
+test2:				
+					@cp push_swap ./tester2/
+					@./tester2/tester.sh
 
 viz:				
 					@git clone https://github.com/o-reo/push_swap_visualizer.git
 
 clone:
 					@git clone https://github.com/lmalki-h/push_swap_tester.git tester
+					@git clone https://github.com/laisarena/push_swap_tester.git tester2
 
 $(BONUS_NAME):			$(LIBFT) $(OBJ_B) $(GNL) $(GNL_HEADER)
 					@echo "$(GREEN)Compiling Bonus:$(NORMAL)"
