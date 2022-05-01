@@ -77,7 +77,6 @@ bonus:				$(BONUS_NAME)
 
 load:
 				curl -O https://projects.intra.42.fr/uploads/document/document/8341/checker_Mac
-				mv checker_Mac checker
 
 test:				all bonus
 					@./tester/tester.sh ./ 3 10
