@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 15:59:42 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/30 16:45:07 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/05/01 17:02:52 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	error(int mode, char **nbr, t_stack *stack)
 {
 	if (!mode)
 		free_all(nbr);
-	ft_putendl_fd("Error", 2);
+	ft_putendl_fd("Error", STDERR_FILENO);
 	free_stack(stack);
 	exit(ERROR_EXIT);
 }

@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 14:31:03 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/30 16:21:48 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/05/01 17:17:30 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 # define PUSHSWAP_H
 # define ERROR_EXIT 1
 # define CLEAN_EXIT 0
+# define STDIN_FILENO 0
+# define STDOUT_FILENO 1
+# define STDERR_FILENO 2
+# define NULL ((void *) 0)
 
 # include <stdio.h>
 # include <stdlib.h>

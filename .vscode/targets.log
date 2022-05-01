@@ -8,11 +8,12 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Sun May  1 15:53:25 2022
+# Make data base, printed on Sun May  1 16:59:12 2022
 
 # Variables
 
 # automatic
+ 
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
 ?F = $(notdir $?)
@@ -134,6 +135,7 @@ LIBFT = $(LIBFT_PATH)/libft.a
 CC = gcc
 # default
 MAKE_VERSION := 3.81
+ 
 # environment
 USER = greatng
 # makefile
@@ -225,7 +227,7 @@ TERM = xterm-256color
 # environment
 VSCODE_PID = 499
 # variable set hash-table stats:
-# Load=106/1024=10%, Rehash=0, Collisions=10/169=6%
+# Load=106/1024=10%, Rehash=0, Collisions=9/166=5%
 
 # Pattern-specific Variable Values
 
@@ -233,11 +235,9 @@ VSCODE_PID = 499
 
 # Directories
 
-# include (device 16777231, inode 7431128): 4 files, no impossibilities so far.
-# . (device 16777231, inode 7430802): 13 files, no impossibilities.
-# src (device 16777231, inode 8783223): 16 files, no impossibilities so far.
+# . (device 16777231, inode 7430802): 11 files, no impossibilities.
 
-# 33 files, no impossibilities in 3 directories.
+# 11 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -259,31 +259,13 @@ obj_b/%.o: bonus/%.c include/checker.h
 
 # Files
 
-obj/ps_rra_rrb_rrr.o: src/ps_rra_rrb_rrr.c include/pushswap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `ps_rra_rrb_rrr'
-#  Last modified 2022-04-30 16:58:27
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 53):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GREEN)Compiling:$(NORMAL)"
-	$(CC) -c $< -o $@ 
-	
-
 # Not a target:
-src/pushswap.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-27 21:24:50
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+obj/ps_rra_rrb_rrr.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 all: push_swap
- 
 #  Phony target (prerequisite of .PHONY).
 #  Command-line target.
 #  Implicit rule search has not been done.
@@ -291,7 +273,7 @@ all: push_swap
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/3=0%
 
 # Not a target:
 obj_b/ch_checkvalid.o:
@@ -317,28 +299,10 @@ obj/ps_smallsort.o:
 #  File has not been updated.
 
 # Not a target:
-src/ps_ra_rb_rr.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-27 01:32:57
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
 obj/ps_ss_rr_rrr.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-
-# Not a target:
-src/ps_is_sorted.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-26 20:19:00
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 pig:
 #  Implicit rule search has not been done.
@@ -375,6 +339,7 @@ pig:
 	°*#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#°..      °  .o@#°                \n\
 	*  °oO* °@@@@@@@@@@@@@@@@@@@@@@@@@@@. ..  ...    @@@@@@O               \n\
 	.  @@@@@° @@@@@@@@@@@@@@@@@@@@@#°...     O@@@@@@  @@@@@@@@              \n\
+ 
 	@@@@O .@@@@@@@@@@@@@@@@@@@@* *@@@@@@@@@@@@@@@o o@@@@@@@#             \n\
 	.°  *@@@@@@@@@@@@@@@@@@@@@* o@@@@@@@@@@@@* #@  @@@@@@@@*            \n\
 	@@@@@@@@@@@@@@@@@@@@@@@@@#  .*O#@@@#O*   oo  @@@@@@@@O            \n\
@@ -385,7 +350,7 @@ pig:
 	O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o                       \n\
 	°  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#                        \n\
 	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@      °                  \n\
-	pipex compile completed"
+	push_swap compile completed"
 	
 
 # Not a target:
@@ -400,33 +365,17 @@ obj_b/ch_ra_rb_rr.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-obj/ps_sa_sb_ss.o: src/ps_sa_sb_ss.c include/pushswap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `ps_sa_sb_ss'
-#  Last modified 2022-04-30 16:58:27
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 53):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GREEN)Compiling:$(NORMAL)"
-	$(CC) -c $< -o $@ 
-	
+# Not a target:
+obj/ps_sa_sb_ss.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-obj/pushswap.o: src/pushswap.c include/pushswap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `pushswap'
-#  Last modified 2022-04-30 16:58:27
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 53):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GREEN)Compiling:$(NORMAL)"
-	$(CC) -c $< -o $@ 
-	
+# Not a target:
+obj/pushswap.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 gnl/get_next_line.h:
@@ -435,85 +384,62 @@ gnl/get_next_line.h:
 #  File has not been updated.
 
 # Not a target:
-src/ps_rra_rrb_rrr.c:
+Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-04-27 01:35:42
+#  Last modified 2022-05-01 16:58:51
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-Makefile:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-30 16:13:03
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+obj/ps_pa_pb.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-obj/ps_pa_pb.o: src/ps_pa_pb.c include/pushswap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `ps_pa_pb'
-#  Last modified 2022-04-30 16:58:27
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 53):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GREEN)Compiling:$(NORMAL)"
-	$(CC) -c $< -o $@ 
-	
+# Not a target:
+obj/ps_deepcopy.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-obj/ps_deepcopy.o: src/ps_deepcopy.c include/pushswap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `ps_deepcopy'
-#  Last modified 2022-04-30 16:58:27
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 53):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GREEN)Compiling:$(NORMAL)"
-	$(CC) -c $< -o $@ 
-	
+# Not a target:
+obj/ps_exit.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-obj/ps_exit.o: src/ps_exit.c include/pushswap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `ps_exit'
-#  Last modified 2022-04-30 16:58:27
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 53):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GREEN)Compiling:$(NORMAL)"
-	$(CC) -c $< -o $@ 
-	
-
-obj/ps_deter_algo.o: src/ps_deter_algo.c include/pushswap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `ps_deter_algo'
-#  Last modified 2022-04-30 16:58:27
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
- 
-#  commands to execute (from `Makefile', line 53):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GREEN)Compiling:$(NORMAL)"
-	$(CC) -c $< -o $@ 
-	
+# Not a target:
+obj/ps_deter_algo.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 libft/libft.a:
 #  Implicit rule search has not been done.
-#  Last modified 2022-04-30 16:58:27
+#  Implicit/static pattern stem: `'
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := libft/libft.a
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/11=9%
 #  commands to execute (from `Makefile', line 63):
 	@make -C $(LIBFT_PATH) all
 	
@@ -541,24 +467,6 @@ obj_b/ch_is_sorted.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-include/pushswap.h:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-30 16:21:48
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-src/ps_sa_sb_ss.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-27 01:54:26
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
 leaks: libft/libft.a obj/pushswap.o obj/ps_sa_sb_ss.o obj/ps_rra_rrb_rrr.o obj/ps_ra_rb_rr.o obj/ps_pa_pb.o obj/ps_is_sorted.o obj/ps_exit.o obj/ps_deter_algo.o obj/ps_deepcopy.o obj/ps_checkvalid.o obj/ps_radix_sort.o obj/ps_smallsort.o obj/ps_my_sort.o obj/ps_ss_rr_rrr.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -568,62 +476,11 @@ leaks: libft/libft.a obj/pushswap.o obj/ps_sa_sb_ss.o obj/ps_rra_rrb_rrr.o obj/p
 	$(CC) $(CFLAGS) $(LEAKS) $(LIBFT) $(OBJ) $< -o $(NAME)
 	
 
-obj/ps_checkvalid.o: src/ps_checkvalid.c include/pushswap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `ps_checkvalid'
-#  Last modified 2022-04-30 16:58:57
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := obj/ps_checkvalid.o
-# automatic
-# % := 
-# automatic
-# * := ps_checkvalid
-# automatic
-# + := src/ps_checkvalid.c include/pushswap.h
-# automatic
-# | := 
-# automatic
-# < := src/ps_checkvalid.c
-# automatic
-# ^ := src/ps_checkvalid.c include/pushswap.h
-# automatic
-# ? := src/ps_checkvalid.c
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=2/16=12%
-#  commands to execute (from `Makefile', line 53):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GREEN)Compiling:$(NORMAL)"
-	$(CC) -c $< -o $@ 
-	
-
 # Not a target:
-src/ps_pa_pb.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-25 15:22:43
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-src/ps_deepcopy.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-21 18:07:16
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-src/ps_exit.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-30 16:45:07
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+obj/ps_checkvalid.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 obj_b/ch_rra_rrb_rrr.o:
@@ -636,15 +493,6 @@ obj_b/ch_rra_rrb_rrr.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-
-# Not a target:
-src/ps_deter_algo.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-30 16:26:31
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 checker: libft/libft.a obj_b/checker.o obj_b/ch_checkvalid.o obj_b/ch_exit.o obj_b/ch_instruction.o obj_b/ch_is_sorted.o obj_b/ch_pa_pb.o obj_b/ch_ra_rb_rr.o obj_b/ch_rra_rrb_rrr.o obj_b/ch_sa_sb_ss.o gnl/get_next_line.c gnl/get_next_line_utils.c gnl/get_next_line.h
 #  Implicit rule search has not been done.
@@ -677,27 +525,19 @@ clean:
 	@$(RM) $(NAME) $(BONUS_NAME)
 	
 
-obj/ps_ra_rb_rr.o: src/ps_ra_rb_rr.c include/pushswap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `ps_ra_rb_rr'
-#  Last modified 2022-04-30 16:58:27
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 53):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GREEN)Compiling:$(NORMAL)"
-	$(CC) -c $< -o $@ 
-	
+# Not a target:
+obj/ps_ra_rb_rr.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 push_swap: libft/libft.a obj/pushswap.o obj/ps_sa_sb_ss.o obj/ps_rra_rrb_rrr.o obj/ps_ra_rb_rr.o obj/ps_pa_pb.o obj/ps_is_sorted.o obj/ps_exit.o obj/ps_deter_algo.o obj/ps_deepcopy.o obj/ps_checkvalid.o obj/ps_radix_sort.o obj/ps_smallsort.o obj/ps_my_sort.o obj/ps_ss_rr_rrr.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-04-30 16:58:57
+#  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/3=0%
 #  commands to execute (from `Makefile', line 49):
 	@echo "$(GREEN)Compiling:$(NORMAL)"
 	$(CC) $(CFLAGS) $(LIBFT) $(OBJ) $< -o $(NAME)
@@ -716,19 +556,11 @@ obj/ps_radix_sort.o:
 #  File has not been updated.
 
 # Not a target:
-src/ps_checkvalid.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-30 16:59:03
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
 obj_b/checker.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
 
 # Not a target:
 obj_b/ch_sa_sb_ss.o:
@@ -754,22 +586,14 @@ obj/ps_my_sort.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-obj/ps_is_sorted.o: src/ps_is_sorted.c include/pushswap.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `ps_is_sorted'
-#  Last modified 2022-04-30 16:58:27
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 53):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GREEN)Compiling:$(NORMAL)"
-	$(CC) -c $< -o $@ 
-	
+# Not a target:
+obj/ps_is_sorted.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # files hash-table stats:
-# Load=51/1024=5%, Rehash=0, Collisions=12/167=7%
+# Load=40/1024=4%, Rehash=0, Collisions=3/107=3%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -779,9 +603,8 @@ obj/ps_is_sorted.o: src/ps_is_sorted.c include/pushswap.h
 # # of strings in strcache: 1
 # # of strcache buffers: 1
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
- 
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sun May  1 15:53:25 2022
+# Finished Make data base on Sun May  1 16:59:12 2022
 
  

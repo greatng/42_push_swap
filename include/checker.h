@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 16:14:10 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/27 21:14:55 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/05/01 17:17:29 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # define STDIN_FILENO 0
 # define STDOUT_FILENO 1
 # define STDERR_FILENO 2
+# define NULL ((void *) 0)
 
 # include <stdio.h>
 # include <stdlib.h>

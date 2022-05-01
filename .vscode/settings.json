@@ -3,5 +3,6 @@
 	"files.associations": {
 		"libft.h": "c",
 		"pushswap.h": "c"
-	}
+	},
+	"C_Cpp.errorSquiggles": "Disabled"
 }

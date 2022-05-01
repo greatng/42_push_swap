@@ -1,6 +1,7 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/greatng/42Bangkok/42cursus/pushswap'
 make -C ./libft all
+ 
 mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
 gcc -c src/pushswap.c -o obj/pushswap.o 
