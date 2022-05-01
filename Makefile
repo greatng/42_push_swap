@@ -1,6 +1,5 @@
 NAME			=	push_swap
 BONUS_NAME		=	checker
-LEAKS			=	-fsanitize=address
 CC			=	gcc
 CFLAGS			=	-Wall -Wextra -Werror
 RM			=	rm -rf
@@ -62,13 +61,11 @@ $(OBJ_B_DIR)/%.o:		$(BONUS_DIR)/%.c $(BONUS_H)
 $(LIBFT):
 					@make -C $(LIBFT_PATH) all
 
-leaks:				$(LIBFT) $(OBJ) 
-					@echo "$(GREEN)Compiling:$(NORMAL)"
-					$(CC) $(CFLAGS) $(LEAKS) $(LIBFT) $(OBJ) $< -o $(NAME)
-
 clean:
 					@make -C $(LIBFT_PATH) clean
 					@$(RM) $(NAME) $(BONUS_NAME)
+					@$(RM) tester *.log
+					@$(RM) push_swap_visualizer
 fclean:				clean
 					@make -C $(LIBFT_PATH) fclean
 					@$(RM) -rf $(OBJ) $(OBJ_DIR) $(OBJ_B) $(OBJ_B_DIR)
@@ -76,16 +73,29 @@ fclean:				clean
 
 re:					fclean all
 
-bonus:				$(BONUS_NAME) 
+bonus:				$(BONUS_NAME)
+
+load:
+				curl -O https://projects.intra.42.fr/uploads/document/document/8341/checker_Mac
+				mv checker_Mac checker
+
+test:				clone all bonus
+					@./tester/tester.sh ./ 3 10
+					@./tester/tester.sh ./ 5 10
+					@./tester/tester.sh ./ 100 10
+					@./tester/tester.sh ./ 500 10
+
+viz:				
+					@git clone https://github.com/o-reo/push_swap_visualizer.git
 
 clone:
-					@git clone https://github.com/LeoFu9487/push_swap_tester.git
+					@git clone https://github.com/lmalki-h/push_swap_tester.git tester
 
 $(BONUS_NAME):			$(LIBFT) $(OBJ_B) $(GNL) $(GNL_HEADER)
 					@echo "$(GREEN)Compiling Bonus:$(NORMAL)"
 					$(CC) $(CFLAGS) $(LIBFT) $(OBJ_B) $(GNL) $< -o $(BONUS_NAME)
 
-.PHONY:				all clean fclean re bonus
+.PHONY:				all clean fclean re bonus test viz clone load
 
 pig:				
 					@echo "                    *                                             .                       \n\
@@ -128,4 +138,4 @@ pig:
                         O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o                       \n\
                       °  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#                        \n\
                           @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@      °                  \n\
-					push_swap compile completed"
+					push_swap"

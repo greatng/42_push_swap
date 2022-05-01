@@ -2,18 +2,22 @@ make re --dry-run --keep-going --print-directory
 make: Entering directory `/Users/greatng/42Bangkok/42cursus/pushswap'
 make -C ./libft clean
 rm -rf push_swap checker
+rm -rf tester *.log
+rm -rf push_swap_visualizer
  
 make -C ./libft fclean
 rm -rf -rf obj/pushswap.o obj/ps_sa_sb_ss.o obj/ps_rra_rrb_rrr.o obj/ps_ra_rb_rr.o obj/ps_pa_pb.o obj/ps_is_sorted.o obj/ps_exit.o obj/ps_deter_algo.o obj/ps_deepcopy.o obj/ps_checkvalid.o obj/ps_radix_sort.o obj/ps_smallsort.o obj/ps_my_sort.o obj/ps_ss_rr_rrr.o obj obj_b/checker.o obj_b/ch_checkvalid.o obj_b/ch_exit.o obj_b/ch_instruction.o obj_b/ch_is_sorted.o obj_b/ch_pa_pb.o obj_b/ch_ra_rb_rr.o obj_b/ch_rra_rrb_rrr.o obj_b/ch_sa_sb_ss.o obj_b
 make pig
 make -C ./libft all
+ 
 mkdir -p obj
+ 
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
 gcc -c src/pushswap.c -o obj/pushswap.o 
- 
 mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
 gcc -c src/ps_sa_sb_ss.c -o obj/ps_sa_sb_ss.o 
+ 
 mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
 gcc -c src/ps_rra_rrb_rrr.c -o obj/ps_rra_rrb_rrr.o 
@@ -25,11 +29,10 @@ gcc -c src/ps_ra_rb_rr.c -o obj/ps_ra_rb_rr.o
 mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
 gcc -c src/ps_pa_pb.c -o obj/ps_pa_pb.o 
- 
 mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
-gcc -c src/ps_is_sorted.c -o obj/ps_is_sorted.o 
  
+gcc -c src/ps_is_sorted.c -o obj/ps_is_sorted.o 
 mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
 gcc -c src/ps_exit.c -o obj/ps_exit.o 
@@ -45,6 +48,7 @@ gcc -c src/ps_deepcopy.c -o obj/ps_deepcopy.o
 mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
 gcc -c src/ps_checkvalid.c -o obj/ps_checkvalid.o 
+ 
 mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
 gcc -c src/ps_radix_sort.c -o obj/ps_radix_sort.o 
@@ -60,8 +64,8 @@ gcc -c src/ps_my_sort.c -o obj/ps_my_sort.o
 mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
 gcc -c src/ps_ss_rr_rrr.c -o obj/ps_ss_rr_rrr.o 
- 
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
 gcc -Wall -Wextra -Werror ./libft/libft.a obj/pushswap.o obj/ps_sa_sb_ss.o obj/ps_rra_rrb_rrr.o obj/ps_ra_rb_rr.o obj/ps_pa_pb.o obj/ps_is_sorted.o obj/ps_exit.o obj/ps_deter_algo.o obj/ps_deepcopy.o obj/ps_checkvalid.o obj/ps_radix_sort.o obj/ps_smallsort.o obj/ps_my_sort.o obj/ps_ss_rr_rrr.o libft/libft.a -o push_swap
+ 
 make: Leaving directory `/Users/greatng/42Bangkok/42cursus/pushswap'
  
