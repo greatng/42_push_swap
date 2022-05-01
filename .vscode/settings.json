@@ -4,5 +4,12 @@
 		"libft.h": "c",
 		"pushswap.h": "c"
 	},
-	"C_Cpp.errorSquiggles": "Disabled"
+	"C_Cpp.errorSquiggles": "Disabled",
+	"makefile.launchConfigurations": [
+		{
+			"cwd": "/Users/greatng/42Bangkok/42cursus/pushswap",
+			"binaryPath": "/Users/greatng/42Bangkok/42cursus/pushswap/push_swap",
+			"binaryArgs": []
+		}
+	]
 }
