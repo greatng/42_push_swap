@@ -20,6 +20,7 @@ gcc -c src/ps_rra_rrb_rrr.c -o obj/ps_rra_rrb_rrr.o
 mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
 gcc -c src/ps_ra_rb_rr.c -o obj/ps_ra_rb_rr.o 
+ 
 mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
 gcc -c src/ps_pa_pb.c -o obj/ps_pa_pb.o 
